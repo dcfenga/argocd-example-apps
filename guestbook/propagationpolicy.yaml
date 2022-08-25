@@ -1,15 +1,15 @@
 apiVersion: policy.karmada.io/v1alpha1
 kind: PropagationPolicy
 metadata:
-  name: guestbook
+  name: guestbook-multicluster-pp
 spec:
   resourceSelectors:
     - apiVersion: apps/v1
       kind: Deployment
-      name: guestbook-ui
+      name: guestbook-multicluster-ui
     - apiVersion: v1
       kind: Service
-      name: guestbook-ui
+      name: guestbook-multicluster-ui
   placement:
     clusterAffinity:
       clusterNames:
